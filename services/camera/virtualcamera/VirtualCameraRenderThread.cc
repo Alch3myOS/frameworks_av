@@ -147,7 +147,6 @@ VirtualCameraRenderThread::VirtualCameraRenderThread(
           std::chrono::duration_cast<std::chrono::nanoseconds>(
               std::chrono::steady_clock::now().time_since_epoch())
               .count()),
-      mLastSurfaceTimestampNanoseconds(0),
       mInputSurfaceFuture(mInputSurfacePromise.get_future()) {
   ALOGV("Creation of VirtualCameraRenderThread with inputSurfaceSize: %dx%d",
         inputSurfaceSize.width, inputSurfaceSize.height);
